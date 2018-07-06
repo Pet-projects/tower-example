@@ -3,3 +3,14 @@
 
 - my_debug:
     msg: "Hello!"
+
+
+- testonly_ssl_export_cacert: dest=/x/y/z
+
+- testonly_ssl_generate_key_and_cert:
+    > common_name: ""
+    self_signed: false
+    > key_dest:  /x/y/z
+    > cert_dest: /x/y/z
+    subject_alternative_names_dns: []
+    validity_days: 10
